@@ -45,15 +45,15 @@ class Booking extends Component {
   }
   checkInvalidDate(date) {
     return (
-      this.bookedOutDates.includes(date.format("Y/MM/DD")) ||
+      this.bookedOutDates.includes(date.format("MM/DD/Y")) ||
       date.diff(moment(), "days") < 0
     );
   }
 
   handleApply(event, picker) {
     //prevent saving date as a previous day in a database by applying utc to date in a string form
-    const sStartDate = picker.startDate.format("Y/MM/DD");
-    const sEndDate = picker.endDate.format("Y/MM/DD");
+    const sStartDate = picker.startDate.format("MM/DD/Y");
+    const sEndDate = picker.endDate.format("MM/DD/Y");
     const startAt = dateToUTC(sStartDate);
     const endAt = dateToUTC(sEndDate);
 

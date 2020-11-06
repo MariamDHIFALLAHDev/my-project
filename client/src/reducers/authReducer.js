@@ -6,7 +6,7 @@ const INITIAL_STATE = {
   username: ""
 };
 
-export default function reducer(state = INITIAL_STATE , action) {
+export default  (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case LOGIN_SUCCESS: {
       return { ...state, isAuth: true, errors: [], username: action.username };

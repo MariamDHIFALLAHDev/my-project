@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import RegisterForm from "./RegisterForm";
 import { register } from "../../actions";
-//import { registered } from "redux-form";
-
 
 class Register extends Component {
   constructor() {
@@ -18,7 +16,7 @@ class Register extends Component {
   }
   registerUser(userData) {
     register(userData).then(
-      register=> this.setState({ redirect: true }),
+      registered => this.setState({ redirect: true }),
       errors => this.setState({ errors })
     );
   }

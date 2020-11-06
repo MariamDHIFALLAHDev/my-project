@@ -3,7 +3,7 @@ const Rental = require("../models/rental");
 const User = require("../models/user");
 const UserCtrl = require("../controllers/user");
 const { normalizeErrors } = require("../helpers/mongoose");
-
+const config = require('config')
 const router = express.Router();
 
 router.get("/secret", UserCtrl.authMiddleware, (req, res) => {

@@ -25,4 +25,4 @@ const rentalSchema = new Schema({
   bookings: [{ type: Schema.Types.ObjectId, ref: "Booking" }]
 });
 
-module.exports = mongoose.model("Rental", rentalSchema);
+module.exports =rental=  mongoose.model("Rental", rentalSchema);

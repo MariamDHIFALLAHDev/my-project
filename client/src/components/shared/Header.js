@@ -17,12 +17,12 @@ class Header extends Component {
   renderAuthButtons(isAuth) {
     if (isAuth) {
       return (
-        <Link>
+        <Link
           className="nav-item nav-link active my-sm-2 clickable"
           onClick={this.handleLogout}
-        
+        >
           Logout <span className="sr-only">(current)</span>
-          </Link>
+        </Link>
       );
     } else {
       return (
@@ -41,15 +41,15 @@ class Header extends Component {
     if (isAuth) {
       return (
         <div className="nav-item dropdown my-sm-2">
-          <Link>
+          <Link
             className="nav-link nav-item dropdown-toggle clickable"
             id="navbarDropdownMenuLink"
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
-        
+          >
             Owner Section
-            </Link>
+          </Link>
           <div
             className="dropdown-menu"
             aria-labelledby="navbarDropdownMenuLink"
@@ -74,7 +74,7 @@ class Header extends Component {
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark ">
         <div className="container ">
           <Link to="/rentals" className="navbar-brand flex-fill" href="#">
-            BookWithMe
+            VIFCO: Book With Me
             <img src={`${process.env.PUBLIC_URL}/img/react-logo.svg`} alt="" />
           </Link>
           <button

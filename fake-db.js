@@ -26,8 +26,8 @@ class FakeDb {
     user.save();
     user2.save();
   }
-  // seedDb() {
-  //  this.pushRentalsToDb();
- // }
+  seedDb() {
+   this.pushRentalsToDb();
+  }
 }
 module.exports = FakeDb;

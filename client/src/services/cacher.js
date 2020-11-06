@@ -8,8 +8,8 @@ export default class Cacher {
       return instance;
     }
 
-   // instance = this;
-   // this.cache = {};
+    instance = this;
+    this.cache = {};
   }
 
   setCacheValue(key, value) {
